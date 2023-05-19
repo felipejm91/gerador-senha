@@ -1,4 +1,5 @@
-import gera_senha, continua, imprime_senha
+import gera_senha
+import continua
 
 op = 1
 
@@ -19,38 +20,23 @@ while op != 0:
           "6) - Aa1@")
     formato = int(input("=> "))
 
-    senha = []
-
     if formato == 1:
-        senha = gera_senha.maiusculo(qtd_caracteres)
-        imprime_senha.imprime(senha)
+        gera_senha.maiusc(qtd_caracteres)
         op = continua.continua()
-
     elif formato == 2:
-        senha = gera_senha.minusculo(qtd_caracteres)
-        imprime_senha.imprime(senha)
+        gera_senha.minusc(qtd_caracteres)
         op = continua.continua()
-
     elif formato == 3:
-        senha = gera_senha.numerico(qtd_caracteres)
-        imprime_senha.imprime(senha)
+        gera_senha.num(qtd_caracteres)
         op = continua.continua()
-
     elif formato == 4:
-        senha = gera_senha.maiuscMinusc(qtd_caracteres)
-        imprime_senha.imprime(senha)
+        gera_senha.maiMin(qtd_caracteres)
         op = continua.continua()
-
     elif formato == 5:
-        senha = gera_senha.alfanumerico(qtd_caracteres)
-        imprime_senha.imprime(senha)
+        gera_senha.alfanum(qtd_caracteres)
         op = continua.continua()
-
-
     elif formato == 6:
-        senha = gera_senha.alfacaracter(qtd_caracteres)
-        imprime_senha.imprime(senha)
+        gera_senha.alfacar(qtd_caracteres)
         op = continua.continua()
-
 
 print("Volte sempre!")
